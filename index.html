@@ -138,19 +138,34 @@
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+										<!-- <input type="text" name="name" id="name"/> -->
+										<textarea name="name" id="name" rows="1">Write your name here</textarea>
 									</div>
 									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
+										<label for="subject">Subject</label>
+										<!-- <input type="text" name="email" id="subject" /> -->
+										<textarea name="subject" id="subject" rows="1">Write your subject here</textarea>
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
+										<textarea name="message" id="message" rows="3">Write your message here</textarea>
+
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<!-- <li><input type="submit" value="Send Message" /></li> --> 
+									<a href = "mailto:godfred.s.gyimah@gmail.com?subject=Write%20your%20subject%20%2F%20reason%20here&body=Write%20your%20message%20here">Send Message</a>
+									<script>
+									function sendMail()
+									{
+										var yourMessage = document.getElementById("message").value;
+										var subject = document.getElementById("subject").value;
+										document.location.href = "mailto:godfred.s.gyimah@gmail.com?subject="
+											+ encodeURIComponent(subject)
+											+ "&body=" + encodeURIComponent(yourMessage);
+									}
+									</script>
+									
 								</ul>
 							</form>
 						</section>
@@ -172,8 +187,10 @@
 							<section>
 								<h3>Social</h3>
 								<ul class="icons">
-									<li><a href="https://www.linkedin.com/company/analytiks-ai/" target="_blank" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/analytiks-ai/" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://twitter.com/GodfredGyimah" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/godfred.gyimah.92" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.linkedin.com/in/godfred-s-gyimah/" target="_blank" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+									<li><a href="https://github.com/GGYIMAH1031" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</section>
 						</section>
